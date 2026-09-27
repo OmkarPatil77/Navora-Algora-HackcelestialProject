@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FFFDF9;
+    --foreground: #181E4B;
+    --card: #FFFFFF;
+    --card-foreground: #181E4B;
+    --popover: #FFFFFF;
+    --popover-foreground: #181E4B;
+    --primary: #DF6951;
+    --primary-foreground: #FFFFFF;
+    --primary-hover: #C74E36;
+    --primary-subtle: #FDF5F3;
+    --secondary: #181E4B;
+    --secondary-foreground: #FFFFFF;
+    --muted: #F8F5EE;
+    --muted-foreground: #5E6282;
+    --accent: #FEF1D4;
+    --accent-foreground: #181E4B;
+    --accent-warm: #F1A501;
+    --accent-teal: #14B8A6;
+    --border: #F1ECE1;
+    --input: #EBE4D5;
+    --ring: #DF6951;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FFFDF9;
+  }
+}
+
+/* Custom travel texture and decorative patterns */
+.bg-subtle-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(232, 226, 214, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 226, 214, 0.4) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(200, 75, 49, 0.12) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DDD4C0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C2B49A;
+}
